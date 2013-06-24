@@ -1,0 +1,9 @@
+# shell scripts
+*.sh
+
+# emacs files
+*~
+
+# object and excecutables files
+*.o
+*.out
