@@ -29,6 +29,10 @@ somma:
 	add ebp, 8
 	pushad
 
+	xor eax, eax
+	xor ebx, ebx
+
+break:	
 	mov ax, [ebp]		; primo operando
 	mov bx, [ebp + 2]	; secondo operando
 
@@ -36,6 +40,9 @@ somma:
 
 	mov [ebp+4], ax
 
+	push ax
+	call write_int
+	
 	popad
 	pop ebp
 	ret 4
